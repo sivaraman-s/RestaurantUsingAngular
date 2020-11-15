@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -36,7 +37,8 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     MatListModule,
     FlexLayoutModule,
-    MatCarouselModule.forRoot()
+    MatCarouselModule.forRoot(),
+    CarouselModule
     ],
   providers: [],
   bootstrap: [AppComponent]
