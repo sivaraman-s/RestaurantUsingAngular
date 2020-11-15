@@ -6,6 +6,7 @@ import { MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -34,7 +35,8 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     AppRoutingModule,
     MatListModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatCarouselModule.forRoot()
     ],
   providers: [],
   bootstrap: [AppComponent]
