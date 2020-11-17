@@ -5,7 +5,7 @@ import { HomeComponent } from '../home/home.component';
 import { AboutComponent } from '../about/about.component';
 import { MenuComponent } from '../menu/menu.component';
 import { ContactComponent } from '../contact/contact.component';
-
+import { DishComponent } from '../dish/dish.component';
 
 
 const routes : Routes = [
@@ -14,6 +14,7 @@ const routes : Routes = [
   { path:"aboutus",     component:AboutComponent  },
   { path:"menu",        component:MenuComponent   },
   { path:"contactus",   component:ContactComponent },
+  { path:"dish/:id",    component:DishComponent},
   { path:"",redirectTo:"/home",pathMatch:"full"},
   { path:"**",redirectTo:"/home",pathMatch:"full"}
 ]  

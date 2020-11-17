@@ -1,1 +1,28 @@
-<p>menu works!</p>
+<div class="container"
+      fxLayout="column"
+      fxLayoutGap="10px">
+
+    <div>
+        <h1>MENU</h1>
+    </div>
+
+    <div class="menu-items">
+        <mat-grid-list  [cols]="breakpoint" [gutterSize]="'11px'" rowHeight="300px" (window:resize)="onChange($event)">
+            <mat-grid-tile *ngFor="let dish of dishes" [routerLink]="['/dish',dish.id]">
+                <img src={{dish.image}} alt={{dish.name}}>
+                <mat-grid-tile-footer class="dishName">
+                    <div>
+                        <h3>{{dish.name}}</h3>
+                    </div>
+                </mat-grid-tile-footer>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+    <div class="emptySpace"></div>
+
+
+</div>
+
+
+   

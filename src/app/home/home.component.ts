@@ -17,18 +17,15 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  slides=[
-    {'image':'assets/img-1.jpg'},{'image':'assets/logo.jpg'},{'image':'assets/img-1.jpg'},
-    {'image':'assets/logo.jpg'},{'image':'assets/img-1.jpg'}
-  ]
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
-    touchDrag: false,
+    autoplay:true,
+    touchDrag: true,
     pullDrag: true,
     dots: false,
-    autoHeight:true,
-    navSpeed: 700,
+    navSpeed: 10000,
+    autoplayTimeout:2000,
     navText: ['', ''],
     responsive: {
       0: {

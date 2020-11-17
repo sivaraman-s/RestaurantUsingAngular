@@ -1,0 +1,47 @@
+
+<div fxLayout="column"
+     fxLayout.gt-sm="row">
+
+    <button mat-raised-button color="warn" (click)="goBack()">Back</button>
+    <div *ngIf="dish"
+            fxFlex="100"
+            fxFlex.gt-sm="50">
+        <mat-card>
+            <mat-card-header>
+                <h2>{{dish.name}}</h2>
+            </mat-card-header>  
+            <img class="responsive" src={{dish.image}} alt={{dish.name}} >
+            <mat-card-content>
+                <h3>Price: <span class="fa fa-rupee fa-xs"></span>{{dish.price}}</h3>
+                <p class="dishDesc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dish.description}}</p>
+            </mat-card-content>      
+        </mat-card>
+    </div>
+
+    <div  *ngIf="dish"
+            fxFlex="100" 
+            fxFlex.gt-sm="50"
+
+        >
+
+        <h2 style="padding-top: 10px;">COMMENTS</h2>
+        <mat-list *ngFor="let comment of dish.comments">
+            <mat-list-item>
+                <h4 mat-line>{{comment.comment}}</h4>
+
+                <p class="star" mat-line *ngIf="comment.rating===4"><i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i><i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i><i class="fa fa-star"></i></p>
+
+
+                <p class="star" mat-line *ngIf="comment.rating===5"> <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i><i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i><i class="fa fa-star checked"></i></p>
+
+
+                <p class="author" mat-line>-- {{comment.author}},&nbsp;&nbsp;{{comment.date | date}}</p>
+            </mat-list-item>
+        </mat-list>
+    </div>
+    
+</div>

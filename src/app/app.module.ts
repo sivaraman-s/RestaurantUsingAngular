@@ -5,9 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule} from '@angular/material/button';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { MatCardModule } from '@angular/material/card';
+
+import { DishService } from './services/dish.service';
+import { TeamService } from './services/team.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -16,6 +21,7 @@ import { MenuComponent } from './menu/menu.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { DishComponent } from './dish/dish.component';
 
 
 
@@ -27,7 +33,8 @@ import { FooterComponent } from './footer/footer.component';
     MenuComponent,
     ContactComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DishComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +45,11 @@ import { FooterComponent } from './footer/footer.component';
     MatListModule,
     FlexLayoutModule,
     MatCarouselModule.forRoot(),
-    CarouselModule
+    CarouselModule,
+    MatGridListModule,
+    MatCardModule
     ],
-  providers: [],
+  providers: [DishService,TeamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

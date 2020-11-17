@@ -1,1 +1,30 @@
-<p>about works!</p>
+<div>
+    <img class="ourStory" src="../../assets/team/ourstory2.jpg" alt="Our Story">
+    <div>
+        <p>At ‘Eat Love’, we’re tied in with presenting crisp food, regardless of whether it implies going the additional mile. When you stroll tbough our entryways, we do what we can to make everybody feel comfortable in light of the fact that our family stretches out tbough your locale.
+            ‘Eat Love’ is an organization that is continually developing. From the principal eatery in 1990, we’ve kept on extending’ vision to help other individuals end up effective entrepreneurs by owning an ‘Eat Love’ establishment. We search for franchisees who are focused on quality, not compromising.</p>
+    </div>
+    <div>
+        <p>Today, we can be found in numerous nations and have our sights on extending much more. Be that as it may, regardless of where you discover us, quality will dependably be our formula.
+            Our menu highlights things that utilization the sound and fragrant flavors, however forgets the stuffing ghee, spread, oil, and overwhelming cream.
+             We Believe in Quality. All around. Quality food can’t be made without quality initiative. Find out about the general population driving The ‘Eat Love’ .</p>
+    </div>
+
+    <h1><center>Our Team</center></h1>
+
+    <div class="container">
+        <div class="flex-container"  fxLayout="row" fxLayout.lt-md="column">
+            <mat-card fxFlex="25" *ngFor="let people of ourpeople">
+                <mat-card-header>
+                    <mat-card-title>{{people.name}}</mat-card-title>
+                    <mat-card-subtitle>{{people.position}}</mat-card-subtitle>
+                </mat-card-header>
+                <img  style="justify-content: center;" class="image" src={{people.image}}  alt={{people.name}}>
+                <mat-card-content>
+                    <p class="chef-desc"> {{people.description}}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        
+    </div>
+</div>
