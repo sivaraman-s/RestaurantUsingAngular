@@ -5,7 +5,7 @@
     font-weight: bolder;
 }
 
-.facebook-btn, .twitter-btn, .google-btn, .linkedin-btn, .instagram-btn {
+.facebook-btn, .twitter-btn, .google-btn, .youtube-btn, .linkedin-btn, .instagram-btn {
     margin: 5px;
     color: white;
 }
@@ -43,6 +43,46 @@ agm-map{
     width: 100%;
 }
 
+
+.d1{
+    padding-top: 10px;
+}
 .d2{
-    margin: 20px;
+    text-align: center;
+}
+
+.main{
+    padding-top: 35px;
+    margin: auto;
+}
+
+
+@media(max-width:959px){
+    .d2{
+        padding-top: 20px;
+        width: 120%;
+    }
+    
+}
+
+
+@media(max-width:959px){
+    .main{
+        width: 50%;
+    }
+    .d2{
+        padding-top: 20px;
+        width: 130%;
+    }
+    
+}
+
+@media(min-width:960px){
+    .main{
+        width: 70%;
+    }
+}
+
+.social{
+    padding-top: 15px;
 }

@@ -16,11 +16,11 @@
 
     </div>
 
-    <h1 style="text-align:center;">OUR TEAM</h1>
+    <h1 style="text-align:center;padding-top: 20px;">OUR TEAM</h1>
 
     <div class="container">
         <div class="flex-container" fxLayout="row" fxLayout.xs="column">
-            <mat-card fxFlex.sm="50%" [fxFlex.gt-sm]="25" *ngFor="let people of ourpeople">
+            <mat-card fxFlex="25" *ngFor="let people of ourpeople">
                 <mat-card-header>
                     <mat-card-title><strong>{{people.name}}</strong></mat-card-title>
                     <mat-card-subtitle>{{people.position}}</mat-card-subtitle>

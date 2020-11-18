@@ -1,7 +1,7 @@
 import { people } from './team';
 
-// ANDRE
-//Andre wanted to do something extraordinary from a young age.
+// Han
+//Han wanted to do something extraordinary from a young age.
 //Little did he know, his budding culinary expertise would launch him into a whirlwind adventure in the fine dining industry.
 //He ventured into the restaurant business with determination for success and passion for fine cuisine.
 //With confidence and 16 years of experience in the restaurant business, he took a blind leap of faith and opened a place of his own.
@@ -25,20 +25,20 @@ import { people } from './team';
 
 
 
-// ALTON
-//Alton's culinary career began early on, inspired by his parents and their love and respect for quality and tradition. 
-//After graduating from the Culinary Institute at age 20, Alton sought opportunities to further develop his own creativity.
+// Gary
+//Gary's culinary career began early on, inspired by his parents and their love and respect for quality and tradition. 
+//After graduating from the Culinary Institute at age 20, Gary sought opportunities to further develop his own creativity.
 //In 2017, shortly after joining 'Love Eat', he elevated the cuisine to its current state, continuing to update the menu seasonally and reflecting his most recent travels.
-//Alton vast menu of international comfort food ranged from foie gras to fried chicken
+//Gary vast menu of international comfort food ranged from foie gras to fried chicken
 
 
 
 export const teams : people[] = [
     {
-        name:"Andre Chiang",
+        name:"Han Chiang",
         position:"Chief Executive Officer",
         image:"../../assets/team/team1.jpg",
-        description:"Andre wanted to do something extraordinary from a young age.He ventured into the  restaurant business with determination for success and passion for fine cuisine.Shortly after opening, 'Love Eat' became one of the top dining restaurants in the area."
+        description:"Han wanted to do something extraordinary from a young age.He ventured into the  restaurant business with determination for success and passion for fine cuisine.Shortly after opening, 'Love Eat' became one of the top dining restaurants in the area."
     },
     {
         name:"Jamie Deen",
@@ -49,13 +49,13 @@ export const teams : people[] = [
     {
         name:"David Kinch",
         position:"Chief Operating Officer",
-        image:"../../assets/team/team3.jpg",
+        image:"../../assets/team/team8.jpg",
         description:"As Chief Operating Officer at 'Love Eat', David  leads the charge in creating guest experiences that get great reviews! He oversees all operations and operations services for the more than 5 years.He is  a graduate of Emerson College"
     },
     {
-        name:"Alton Brown",
+        name:"Gary Brown",
         position:"Chief Executive Chef",
         image:"../../assets/team/team2.jpg",
-        description:"Alton's culinary career began early on, inspired by his parents. After graduation,he sought opportunities to further develop his own creativity.He elevated the cuisine to its current state, continuing to update the menu seasonally."
+        description:"Gary's culinary career began early on, inspired by his parents. After graduation,he sought opportunities to further develop his own creativity.He elevated the cuisine to its current state, continuing to update the menu seasonally."
     },
 ]

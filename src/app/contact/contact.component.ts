@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
       latitude :13.006068 ,
       longitude : 80.257451 ,
       maptype:"satellite",
-      zoom:8,
+      zoom:6,
       name:"Love Eat"
     }
   }

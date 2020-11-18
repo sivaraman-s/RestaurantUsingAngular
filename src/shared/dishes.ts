@@ -219,7 +219,7 @@ export const DISHES : Dish[] = [
 
     {
         id: '6',
-        name: 'SWEET PONGAl',
+        name: 'SWEET PONGAL',
         image: 'assets/dishes/pongol.png',
         category: 'Dessert',
         featured: false,

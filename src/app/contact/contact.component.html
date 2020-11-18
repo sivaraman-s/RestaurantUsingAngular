@@ -1,15 +1,14 @@
-<div class="main" fxFlex="100" fxLayout="column" (window:resize)="onChange($event)" fxLayout.gt-xs="row">
 
+<div class="main"  fxLayout="column" (window:resize)="onChange($event)" fxLayout.gt-sm="row">
 
-    <div fxFlex="layout" class="d1">
-        <h2>Our Address:</h2>
-        <p>15, Raghavendra Street,</p>
-        <p>Srinivasa Nagar, New Perungalathur,</p>
-        <p>Chennai, TamilNadu</p> 
-        <p>600 63</p>
-        <p><span class="fa fa-phone fa-lg"></span>+91-9988776698</p>
-        <p><span class="fa fa-envelope fa-lg"></span>service.loveeat@gmail.com</p>
-        <p>Reach out to us:</p>
+    <div fxFlex="50" class="d1">
+        <h2>OUR ADDRESS:</h2>
+        <p>21, Sabari Street,</p>
+        <p>Nesapakkam, K.K. Nagar West, </p>
+        <p>Chennai - 600 078.</p> 
+        <p><span class="fa fa-phone "></span> : +91-9988776698</p>
+        <p><span class="fa fa-envelope "></span> : service.loveeat@gmail.com</p>
+        <p class="social">REACH OUT TO US:</p>
         <a mat-icon-button class="facebook-btn" color="primary"><i class="fa fa-facebook fa-lg"></i></a>
         <a mat-icon-button class="instagram-btn" color="primary"><i class="fa fa-instagram fa-lg"></i></a>
         <a mat-icon-button class="youtube-btn" color="primary"><i class="fa fa-youtube fa-lg"></i></a>
@@ -18,7 +17,8 @@
         <a mat-icon-button class="linkedin-btn" color="primary"><i class="fa fa-linkedin fa-lg"></i></a> 
     </div>
 
-    <div fxFlex="layout" class="d2">
+    <div fxFlex="50" class="d2">
+        <h2>LOCATION</h2>
         <agm-map [latitude]="location.latitude" [longitude]="location.longitude" [mapTypeId]="location.maptype" 
 
                 [zoom]="location.zoom">

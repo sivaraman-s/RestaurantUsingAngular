@@ -2,7 +2,6 @@
 <div fxLayout="column"
      fxLayout.gt-sm="row">
 
-    <button mat-raised-button color="warn" (click)="goBack()">Back</button>
     <div *ngIf="dish"
             fxFlex="100"
             fxFlex.gt-sm="50">
@@ -14,7 +13,10 @@
             <mat-card-content>
                 <h3>Price: <span class="fa fa-rupee fa-xs"></span>{{dish.price}}</h3>
                 <p class="dishDesc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{dish.description}}</p>
-            </mat-card-content>      
+            </mat-card-content>    
+            <mat-card-actions>
+                <button mat-raised-button (click)="goBack()">Back</button>
+            </mat-card-actions>  
         </mat-card>
     </div>
 
