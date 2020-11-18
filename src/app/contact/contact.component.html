@@ -1,1 +1,78 @@
-<p>contact works!</p>
+<div class="main" fxFlex="100" fxLayout="column" (window:resize)="onChange($event)" fxLayout.gt-xs="row">
+
+
+    <div fxFlex="layout" class="d1">
+        <h2>Our Address:</h2>
+        <p>15, Raghavendra Street,</p>
+        <p>Srinivasa Nagar, New Perungalathur,</p>
+        <p>Chennai, TamilNadu</p> 
+        <p>600 63</p>
+        <p><span class="fa fa-phone fa-lg"></span>+91-9988776698</p>
+        <p><span class="fa fa-envelope fa-lg"></span>service.loveeat@gmail.com</p>
+        <p>Reach out to us:</p>
+        <a mat-icon-button class="facebook-btn" color="primary"><i class="fa fa-facebook fa-lg"></i></a>
+        <a mat-icon-button class="instagram-btn" color="primary"><i class="fa fa-instagram fa-lg"></i></a>
+        <a mat-icon-button class="youtube-btn" color="primary"><i class="fa fa-youtube fa-lg"></i></a>
+        <a mat-icon-button class="twitter-btn" color="primary"><i class="fa fa-twitter fa-lg"></i></a>
+        <a mat-icon-button class="google-btn" color="primary"><i class="fa fa-google fa-lg"></i></a>
+        <a mat-icon-button class="linkedin-btn" color="primary"><i class="fa fa-linkedin fa-lg"></i></a> 
+    </div>
+
+    <div fxFlex="layout" class="d2">
+        <agm-map [latitude]="location.latitude" [longitude]="location.longitude" [mapTypeId]="location.maptype" 
+
+                [zoom]="location.zoom">
+                    
+            <agm-marker [latitude]="location.latitude" [longitude]="location.longitude" 
+
+
+                  [label]="location.name">
+
+            </agm-marker>
+
+        </agm-map>
+    </div>
+
+</div>
+
+<div fxLayout="column"> 
+    <form novalidate [formGroup]="feedbackForm"  #resetForm="ngForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <input placeholder="Firstname" formControlName="firstname" matInput type="text">
+            <mat-error *ngIf="feedbackForm.get('firstname').hasError('required') && feedbackForm.get('firstname').touched">
+                FirstName is required
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input placeholder="Laststname" formControlName="lastname" matInput type="text">
+            <mat-error *ngIf="feedbackForm.get('lastname').hasError('required') && feedbackForm.get('lastname').touched">
+                LastName is required
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input placeholder="Email" formControlName="email" matInput type="email">
+            <mat-error *ngIf="feedbackForm.get('email').hasError('required') && feedbackForm.get('email').touched">
+                Email is required
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input placeholder="Phone" formControlName="phone" matInput type="tel">
+            <mat-error *ngIf="feedbackForm.get('phone').hasError('required') && feedbackForm.get('phone').touched">
+                PhoneNumber is required
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input placeholder="Subject" formControlName="subject" matInput type="text">
+            <mat-error *ngIf="feedbackForm.get('subject').hasError('required') && feedbackForm.get('subject').touched">
+                Subject is required
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <textarea placeholder="Message" formControlName="message" matInput rows=6></textarea>
+            <mat-error *ngIf="feedbackForm.get('message').hasError('required') && feedbackForm.get('message').touched">
+                Message is required
+            </mat-error>
+        </mat-form-field>
+        <button mat-button type="submit">Submit</button>
+    </form>
+</div>

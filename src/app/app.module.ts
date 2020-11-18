@@ -10,6 +10,16 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule }  from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
+import { AgmCoreModule } from '@agm/core';
 
 import { DishService } from './services/dish.service';
 import { TeamService } from './services/team.service';
@@ -22,6 +32,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { DishComponent } from './dish/dish.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -34,7 +45,8 @@ import { DishComponent } from './dish/dish.component';
     ContactComponent,
     HeaderComponent,
     FooterComponent,
-    DishComponent
+    DishComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +59,20 @@ import { DishComponent } from './dish/dish.component';
     MatCarouselModule.forRoot(),
     CarouselModule,
     MatGridListModule,
-    MatCardModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatDialogModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    AgmCoreModule.forRoot({
+      apiKey:"AIzaSyBTpkWs6TJZhfaPwiVBOx-dtHzj5jsSgwI",
+      libraries:["places","geometry"]
+    })
+    ],
+    entryComponents:[
+      LoginComponent
     ],
   providers: [DishService,TeamService],
   bootstrap: [AppComponent]

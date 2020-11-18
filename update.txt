@@ -1,0 +1,9 @@
+1) Update Carousel 
+
+2) Hide Login Text in small screens
+
+3) Change David Kinch image to some other image
+
+4) Change Color of Button in Menu--> DIsh detail component
+
+5) Style Contact Page

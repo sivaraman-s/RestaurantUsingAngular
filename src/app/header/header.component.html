@@ -2,10 +2,12 @@
     <mat-toolbar>
         <a routerLink="home"><img height="55px" width="60px" src="assets/logo.jpg" alt="Logo"></a>
         <span class="menuContentRight"></span>
-        <a mat-button color="primary" routerLink="home"> HOME</a>
-        <a mat-button color="primary" routerLink="aboutus"> ABOUT</a>
-        <a mat-button color="primary" routerLink="menu"> MENU </a>
-        <a mat-button color="primary" routerLink="contactus"> CONTACT </a>
+        <a mat-button color="primary" routerLinkActive="active" routerLink="home"> HOME</a>
+        <a mat-button color="primary" routerLinkActive="active" routerLink="aboutus"> ABOUT</a>
+        <a mat-button color="primary" routerLinkActive="active" routerLink="menu"> MENU </a>
+        <a mat-button color="primary" routerLinkActive="active" routerLink="contactus"> CONTACT </a>
+        <span class="space"></span>
+        <a mat-button color="primary" (click)="loginComp()" ><span class="fa fa-sign-in"></span>&nbsp;Login</a>
     </mat-toolbar>
 </div>
 

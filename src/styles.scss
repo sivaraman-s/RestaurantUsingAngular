@@ -10,6 +10,7 @@
 
 
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
 @import '../node_modules/font-awesome/scss/font-awesome';
@@ -21,3 +22,6 @@ body{
     margin: 0;
 }
 
+.space{
+    flex: 1 1 auto;
+}
